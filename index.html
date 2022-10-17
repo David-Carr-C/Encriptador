@@ -14,26 +14,34 @@
 
 		<main>
 			<section>
-				<textarea class="input-texto" cols="40" rows="6" placeholder="Ingrese el texto aqui"></textarea>
+
+				<textarea class="input-texto" placeholder="Ingrese el texto aqui"></textarea>
 
 				<div class="texto-restricciones">
+
 					<img class="exclamacion" src="images/Exclamation.png" alt="signo de exclamacion">
 					<p>Solo letras minúsculas y sin acentos</p>
+
 				</div>
 
 				<div class="botones"> <!-- Los div permiten que queden debajo del textarea los botones -->
+
 					<button class="encriptar" onclick="btnEncriptar()"> Encriptar</button>
 					<button class="desencriptar" onclick="btnDesencriptar()"> Desencriptar</button>
+
 				</div>
 			</section>
 
 			<section>
-				<textarea class="output-texto" cols="18" rows="8" placeholder="Ningun mensaje fue encontrado"></textarea>
 
+				<textarea class="output-texto" placeholder="Ningun mensaje fue encontrado"></textarea>
 
 				<div>
+
 					<button class="copiar" onclick="copiar()"> Copiar</button>
+
 				</div>
+
 			</section>
 		</main>
 

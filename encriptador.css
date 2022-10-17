@@ -1,5 +1,6 @@
-* {
+body {
 	font-family: "Inter";
+	background-color: #E5E5E5;
 }
 
 header {
@@ -9,16 +10,39 @@ header {
 
 main {
 	display: flex;
-	margin-left: 220px;
+	margin-left: 90px;
 	margin-bottom: 50px;
+	margin-top: 20px;
 }
 
 .input-texto {
+	resize: none;
 	height: 450px;
-	width: 400px;
+	width: 800px;
+	background: transparent;
+	border: none;
+	margin-top: 4px;
+	padding: 14px;
+}
+
+.input-texto::placeholder {
+	color: #0A3871;
+}
+
+.texto-restricciones {
+	margin-top: 8px;
+	margin-bottom: 12px;
+	display: flex;
+	gap: 6px;
+	display: flex;
+	align-items: center;
 }
 
 .output-texto {
+	border: none;
+	border-radius: 14px;
+	padding: 14px;
+	resize: none;
 	height: 450px;
 	width: 400px;
 	background-image: url("images/Muñeco.png");
@@ -31,4 +55,36 @@ main {
 
 .exclamacion {
 	display: inline;
+}
+
+.encriptar {
+	height: 42px;
+	width: 30%;
+	background-color: #0A3871;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 14px;
+}
+
+.desencriptar {
+	height: 42px;
+	width: 30%;
+	background-color: #D8DFE8;
+	color: #0A3871;
+	border-radius: 14px;
+	border: 1px solid #0A3871;
+}
+
+.desencriptar:hover, .encriptar:hover {
+	cursor: pointer;
+}
+
+.botones {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.texto-restricciones p {
+	font-size: 12px;
+	color: #495057;
 }
