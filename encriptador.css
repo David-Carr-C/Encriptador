@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
 
+:root {
+	--azul-fuerte: #0A3871;
+	--gris-noseque: #D8DFE8;
+	--light: 200;
+	--medium: 400;
+	--bold: 600;
+}
+
 * {
 	font-family: 'Inter', sans-serif;
 }
 
 body {
-	font-family: "Inter";
 	background-color: #f3f5fc; /*Este es el verdadero color de fondo, el que tome cuando te lo mostre estaba mal xd*/
 }
 
@@ -27,6 +34,8 @@ main {
 	background: transparent;
 	border: none;
 	padding: 14px;
+	font-size: 28px;
+	color: var(--azul-fuerte);
 }
 
 .input-texto:focus { /*Este es el color que no es ni clickear ni pasar por encima, es mas bien, es focus despues de que le das click se queda focus*/
@@ -34,8 +43,9 @@ main {
 }
 
 .input-texto::placeholder {
+	font-weight: var(--medium);
 	font-size: 28px;
-	color: #0A3871;
+	color: var(--azul-fuerte);
 }
 
 .texto-restricciones {
@@ -73,10 +83,10 @@ main {
 .desencriptar {
 	height: 48px;
 	width: 45%;
-	background-color: #D8DFE8;
-	color: #0A3871;
+	background-color: var(--gris-noseque);
+	color: var(--azul-fuerte);
 	border-radius: 14px;
-	border: 1px solid #0A3871;
+	border: 1px solid var(--azul-fuerte);
 }
 
 .desencriptar:hover, .encriptar:hover {
@@ -92,14 +102,32 @@ main {
 	height: 450px;
 	width: 350px;
 	background-image: url("images/Muñeco.png");
-	background-position: center;
+	background-position: 50% 30%;
 	background-repeat: no-repeat;
+	background-size: 300px;
 	font-size: 24px;
-	height: 95%;
+	height: 89%;
+	position: absolute;
+	top: 28px;
+	font-size: 20px;
+	color: black;
 }
 
 .output-texto:focus {
 	outline: none;
+	background: white;
+}
+
+.output-texto::placeholder {
+	text-align: center;
+	padding-top: 400px;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+
+.output-texto:hover {
+	background: white;
 }
 
 .copiar {
