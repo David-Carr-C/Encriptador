@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
+
+* {
+	font-family: 'Inter', sans-serif;
+}
+
 body {
 	font-family: "Inter";
 	background-color: #f3f5fc; /*Este es el verdadero color de fondo, el que tome cuando te lo mostre estaba mal xd*/
@@ -5,61 +11,59 @@ body {
 
 header {
 	margin-left: 84px;
-	margin-top: 40px;
+	margin-top: 28px;
 }
 
 main {
 	display: flex;
-	margin-left: 90px;
-	margin-bottom: 50px;
-	margin-top: 20px;
+	margin-left: 180px;
 }
 
 .input-texto {
+	margin-top: 24px;
 	resize: none;
 	height: 450px;
-	width: 800px;
+	width: 700px;
 	background: transparent;
 	border: none;
-	margin-top: 4px;
 	padding: 14px;
 }
 
+.input-texto:focus { /*Este es el color que no es ni clickear ni pasar por encima, es mas bien, es focus despues de que le das click se queda focus*/
+	outline: none;
+}
+
 .input-texto::placeholder {
+	font-size: 28px;
 	color: #0A3871;
 }
 
 .texto-restricciones {
+	margin-left: 20px;
 	margin-top: 8px;
 	margin-bottom: 12px;
 	display: flex;
 	gap: 6px;
-	display: flex;
 	align-items: center;
 }
 
-.output-texto {
-	border: none;
-	border-radius: 14px;
-	padding: 14px;
-	resize: none;
-	height: 450px;
-	width: 400px;
-	background-image: url("images/Muñeco.png");
-	background-repeat: no-repeat;
-}
-
-.copiar {
-	display: none;
+.texto-restricciones p {
+	font-size: 12px;
+	color: #495057;
 }
 
 .exclamacion {
 	display: inline;
 }
 
+.botones {
+	display: flex;
+	justify-content: space-evenly;
+}
+
 .encriptar {
-	height: 42px;
-	width: 30%;
+	height: 48px;
+	width: 45%;
 	background-color: #0A3871;
 	color: #FFFFFF;
 	border: none;
@@ -67,8 +71,8 @@ main {
 }
 
 .desencriptar {
-	height: 42px;
-	width: 30%;
+	height: 48px;
+	width: 45%;
 	background-color: #D8DFE8;
 	color: #0A3871;
 	border-radius: 14px;
@@ -79,12 +83,25 @@ main {
 	cursor: pointer;
 }
 
-.botones {
-	display: flex;
-	justify-content: space-evenly;
+.output-texto {
+	margin-left: 44px;
+	border: none;
+	border-radius: 14px;
+	padding: 14px;
+	resize: none;
+	height: 450px;
+	width: 350px;
+	background-image: url("images/Muñeco.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 24px;
+	height: 95%;
 }
 
-.texto-restricciones p {
-	font-size: 12px;
-	color: #495057;
+.output-texto:focus {
+	outline: none;
+}
+
+.copiar {
+	display: none;
 }
