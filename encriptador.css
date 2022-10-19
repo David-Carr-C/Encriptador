@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap');
 
-:root {                       /* Variables */
+:root {                          /* Variables */
 	--azul-fuerte: #0A3871;
 	--gris-noseque: #D8DFE8;
 	--light: 200;
@@ -8,12 +8,12 @@
 	--bold: 600;
 }
 
-* {                           /* Unica forma de ponerle la fuente a todo */
+* {                              /* Unica forma de ponerle la fuente a todo */
 	font-family: 'Inter', sans-serif;
 }
 
 body {
-	background-color: #f3f5fc;      /* Este es el verdadero color de fondo */
+	background-color: #f3f5fc;     /* Este es el verdadero color de fondo */
 }
 
 header {
@@ -22,29 +22,29 @@ header {
 }
 
 main {
-	display: flex;        /* Orientar los items en modo row */
+	display: flex;                 /* Orientar los items en modo row */
 	margin-left: 180px;
 }
 
 .input-texto {
 	margin-top: 24px;
-	resize: none;         /* No habilitar el icono abajo derecha del text area */
-	height: 450px;        /* Altura */
-	width: 700px;         /* Ancho */
-	background: transparent;        /* Fondo transparente, nada de fondo y por lo tanto el fondo del body */
-	border: none;         /* Sin bordes */
-	padding: 14px;        /* Margen interno */
-	font-size: 28px;      /* Tamaño de fuente */
-	color: var(--azul-fuerte);      /* Ocupar variables para poner el color de la letra */
+	resize: none;                  /* No habilitar el icono abajo derecha del text area */
+	height: 450px;                 /* Altura */
+	width: 700px;                  /* Ancho */
+	background: transparent;       /* Fondo transparente, nada de fondo y por lo tanto el fondo del body */
+	border: none;                  /* Sin bordes */
+	padding: 14px;                 /* Margen interno */
+	font-size: 28px;               /* Tamaño de fuente */
+	color: var(--azul-fuerte);     /* Ocupar variables para poner el color de la letra */
 }
 
 .input-texto:focus { /*Este es el color que no es ni clickear ni pasar por encima, es mas bien focus: despues de que le das click se queda focus*/
-	outline: none;        /* Marco alrededor despues de clickear en el text area */
+	outline: none;                 /* Marco alrededor despues de clickear en el text area */
 }
 
 .input-texto::placeholder {
 	font-weight: var(--medium);
-	font-size: 28px;      /* Edicion de la letra del placeholder */
+	font-size: 28px;               /* Edicion de la letra del placeholder */
 	color: var(--azul-fuerte);
 }
 
@@ -52,9 +52,9 @@ main {
 	margin-left: 20px;
 	margin-top: 8px;
 	margin-bottom: 12px;
-	display: flex;        /* Poner el icono y texto de restriccion sobre la misma linea */
+	display: flex;                 /* Poner el icono y texto de restriccion sobre la misma linea */
 	gap: 6px;
-	align-items: center;  /* Alinear a la misma altura el icono y el texto */
+	align-items: center;           /* Alinear a la misma altura el icono y el texto */
 }
 
 .texto-restricciones p {
@@ -63,7 +63,7 @@ main {
 }
 
 .exclamacion {
-	display: inline;      /* Que la imagen no ocupe todo el ancho */
+	display: inline;               /* Que la imagen no ocupe todo el ancho */
 }
 
 .botones {
@@ -74,7 +74,7 @@ main {
 .encriptar {
 	height: 48px;
 	width: 45%;
-	background-color: #0A3871;    /* Edicion del boton */
+	background-color: #0A3871;     /* Edicion del boton */
 	color: #FFFFFF;
 	border: none;
 	border-radius: 14px;
@@ -84,14 +84,14 @@ main {
 	height: 48px;
 	width: 45%;
 	background-color: var(--gris-noseque);
-	color: var(--azul-fuerte);    /* Edicion del boton con variables */
+	color: var(--azul-fuerte);     /* Edicion del boton con variables */
 	border-radius: 14px;
 	border: 1px solid var(--azul-fuerte);     /* Quitar cualquier borde y sobreescribir el borde */
 	/* Ancho borde / tipo de borde / color de borde */
 }
 
 .desencriptar:hover, .encriptar:hover {
-	cursor: pointer;      /* Cuando se ponga el mouse sobre el item este cambiara */
+	cursor: pointer;               /* Cuando se ponga el mouse sobre el item este cambiara */
 }
 
 .output-texto {
