@@ -1,3 +1,5 @@
+// Autor: David C.  | Github: David-Carr-C
+
 function btnEncriptar() {
 	input = document.getElementById("input-texto");
 	input = String(input.value);
@@ -16,6 +18,8 @@ function btnEncriptar() {
 
 	document.getElementById("output-texto").style.background = "white";
 	document.getElementById("output-texto").focus();
+
+	window.getSelection().removeAllRanges();
 }
 
 function btnDesencriptar() {
@@ -45,16 +49,60 @@ function copiar() {
 
 	document.execCommand("selectAll");
 	document.execCommand("copy");
-	document.execCommand("delete")
+
+	window.getSelection().removeAllRanges();
 }
 
 document.getElementById("output-texto").addEventListener("focus", () => {
+	button = document.getElementById("copiar");
+	button.style.display = "inline";
+});
+
+document.getElementById("input-texto").addEventListener("focus", () => {
 	change = document.getElementById("output-texto");
 	change.style.backgroundImage = "url(images/Muñeco.png)";
 	change.style.backgroundRepeat = "no-repeat";
 	change.style.backgroundPosition = "50% 30%";
 	change.style.backgroundSize = "300px";
 
+	rm = document.getElementById("output-texto").value = "";
+
+	button = document.getElementById("copiar");
+	button.style.display = "none";
+})
+
+document.getElementById("output-texto").addEventListener("mouseover", () => {
+	if (document.getElementById("output-texto").value.length == 0) {
+		document.getElementById("output-texto").value = " ";
+		document.getElementById("output-texto").style.background = "white";
+	}
+
 	button = document.getElementById("copiar");
 	button.style.display = "inline";
-});
+})
+
+// More info about mouse pseudoelements: https://www.w3schools.com/jsref/event_onmouseleave.asp
+
+document.getElementById("output-texto").addEventListener("mouseleave", () => {
+	if (document.getElementById("output-texto").value == " ") {
+		change = document.getElementById("output-texto");
+		change.style.backgroundImage = "url(images/Muñeco.png)";
+		change.style.backgroundRepeat = "no-repeat";
+		change.style.backgroundPosition = "50% 30%";
+		change.style.backgroundSize = "300px";
+
+		document.getElementById("output-texto").value = "";
+
+		button = document.getElementById("copiar");
+		button.style.display = "none";
+
+		window.getSelection().removeAllRanges();
+
+	}
+})
+
+document.getElementById("output-texto").addEventListener("click", () => {
+	if (document.getElementById("output-texto").value.length == 0) {
+		document.getElementById("output-texto").value = "";
+	}
+})
