@@ -15,6 +15,7 @@ function btnEncriptar() {
 	output.value = input;
 
 	document.getElementById("output-texto").style.background = "white";
+	document.getElementById("output-texto").focus();
 }
 
 function btnDesencriptar() {
@@ -53,4 +54,7 @@ document.getElementById("output-texto").addEventListener("focus", () => {
 	change.style.backgroundRepeat = "no-repeat";
 	change.style.backgroundPosition = "50% 30%";
 	change.style.backgroundSize = "300px";
+
+	button = document.getElementById("copiar");
+	button.style.display = "inline";
 });

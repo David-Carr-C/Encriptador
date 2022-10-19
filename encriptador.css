@@ -74,7 +74,7 @@ main {
 .encriptar {
 	height: 48px;
 	width: 45%;
-	background-color: #0A3871;
+	background-color: #0A3871;    /* Edicion del boton */
 	color: #FFFFFF;
 	border: none;
 	border-radius: 14px;
@@ -84,13 +84,14 @@ main {
 	height: 48px;
 	width: 45%;
 	background-color: var(--gris-noseque);
-	color: var(--azul-fuerte);
+	color: var(--azul-fuerte);    /* Edicion del boton con variables */
 	border-radius: 14px;
-	border: 1px solid var(--azul-fuerte);
+	border: 1px solid var(--azul-fuerte);     /* Quitar cualquier borde y sobreescribir el borde */
+	/* Ancho borde / tipo de borde / color de borde */
 }
 
 .desencriptar:hover, .encriptar:hover {
-	cursor: pointer;
+	cursor: pointer;      /* Cuando se ponga el mouse sobre el item este cambiara */
 }
 
 .output-texto {
@@ -101,46 +102,46 @@ main {
 	resize: none;
 	height: 450px;
 	width: 350px;
-	background-image: url("images/Muñeco.png");
-	background-position: 50% 30%;
-	background-repeat: no-repeat;
-	background-size: 300px;
+	background-image: url("images/Muñeco.png"); /* Imagen como background */
+	background-position: 50% 30%;  /* Posicionamiento del background-image en X y Y */
+	background-repeat: no-repeat;  /* No repetir el background-image | Tecnica que se ocupa para una imagen llenar todo */
+	background-size: 300px;        /* Tamaño del background-image */
 	font-size: 24px;
 	height: 89%;
-	position: absolute;
-	top: 28px;
+	position: absolute;            /* Sin limites para ser posicionado el text-area */
+	top: 28px;                     /* Sin poner el top toma como referencia el container, pero al poner top parte del numero de pixeles asignado */
 	font-size: 20px;
 	color: black;
 }
 
-.output-texto:focus {
-	outline: none;
-	background: white;
+.output-texto:focus {            /* Post click */
+	outline: none;                 /* Borde alrededor post click */
+	background: white;             /* Reset de borde after click */
 }
 
 .output-texto::placeholder {
-	text-align: center;
-	padding-top: 400px;
+	text-align: center;            /* Alineacion del texto al centro */
+	padding-top: 400px;            /* Espacio superior | Orientacion al centro verticalmente */
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: bold;             /* Negritas */
 	color: black;
 }
 
 .output-texto:hover {
-	background: white;
+	background: white;             /* Quitar borde despues de pasar el mouse encima */
 }
 
 .copiar {
-	position: absolute;
+	position: absolute;            /* Boton copiar sin restricciones de orientacion */
 	top: 89%;
-	left: 75%;
+	left: 75%;                     /* Posicionamiento del boton */
 	height: 48px;
-	width: 250px;
+	width: 250px;                  /* Dimensiones del boton */
 	background-color: white;
 	color: var(--azul-fuerte);
-	border-radius: 14px;
+	border-radius: 14px;           /* Colores y estilos del boton */
 	border: 1px solid var(--azul-fuerte);
-	display: none;
+	display: none;                 /* Al inicio no se vera, pero posteriormente, con JS se visualizara */
 }
 
 .copiar:hover {
