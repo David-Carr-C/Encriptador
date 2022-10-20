@@ -69,6 +69,18 @@ document.getElementById("input-texto").addEventListener("focus", () => {
 
 	button = document.getElementById("copiar");
 	button.style.display = "none";
+
+	if (window.matchMedia("(max-width:768px)").matches) {
+		change = document.getElementById("output-texto");
+		change.style.background = "white";
+
+		document.getElementById("output-texto").value = "";
+
+		button = document.getElementById("copiar");
+		button.style.display = "none";
+
+		window.getSelection().removeAllRanges();
+	}
 })
 
 document.getElementById("output-texto").addEventListener("mouseover", () => {
@@ -84,6 +96,18 @@ document.getElementById("output-texto").addEventListener("mouseover", () => {
 // More info about mouse pseudoelements: https://www.w3schools.com/jsref/event_onmouseleave.asp
 
 document.getElementById("output-texto").addEventListener("mouseleave", () => {
+	if (window.matchMedia("(max-width:768px)").matches && document.getElementById("output-texto").value == " ") {
+		change = document.getElementById("output-texto");
+		change.style.background = "white";
+
+		document.getElementById("output-texto").value = "";
+
+		button = document.getElementById("copiar");
+		button.style.display = "none";
+
+		window.getSelection().removeAllRanges();
+	}
+
 	if (document.getElementById("output-texto").value == " ") {
 		change = document.getElementById("output-texto");
 		change.style.backgroundImage = "url(images/Muñeco.png)";
@@ -97,8 +121,8 @@ document.getElementById("output-texto").addEventListener("mouseleave", () => {
 		button.style.display = "none";
 
 		window.getSelection().removeAllRanges();
-
 	}
+
 })
 
 document.getElementById("output-texto").addEventListener("click", () => {
@@ -106,3 +130,14 @@ document.getElementById("output-texto").addEventListener("click", () => {
 		document.getElementById("output-texto").value = "";
 	}
 })
+
+/* @media
+width = matchMedia("(max-width:768)");
+mediaQ = mql => {
+	if (mql.matches)
+		document.getElementById("output-texto").style.background = "white";
+}
+
+width.addListener(mediaQ);
+mediaQ(width);
+*/

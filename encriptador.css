@@ -147,3 +147,40 @@ main {
 .copiar:hover {
 	cursor: pointer;
 }
+
+@media (max-width:768px) {
+	header {
+		margin-top: 48px;
+		margin-left: 42px;
+	}
+
+	.image {                      /* Responsive image */
+		max-width: 22px;
+		height: auto;
+	}
+
+	main {
+		margin-left: 28px;
+		margin-top: 30px;
+		flex-direction: column;
+	}
+
+	.output-texto {
+		position: relative;
+		background: white;
+		width: 648px;
+		margin-left: 28px;
+		border-color: red;
+		/*height: 244px;*/
+	}
+
+	.output-texto::placeholder {
+		padding-top: 0px;
+		font-size: 12px;
+	}
+
+	.copiar {
+		top: 123%;
+		left: 268px;
+	}
+}
