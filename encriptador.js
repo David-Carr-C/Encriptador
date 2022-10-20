@@ -1,4 +1,5 @@
 // Autor: David C.  | Github: David-Carr-C
+// To-do: Bug al Desencriptar y encriptar
 
 function btnEncriptar() {
 	input = document.getElementById("input-texto");

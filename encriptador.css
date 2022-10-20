@@ -170,7 +170,6 @@ main {
 		background: white;
 		width: 648px;
 		margin-left: 28px;
-		border-color: red;
 		/*height: 244px;*/
 	}
 
@@ -182,5 +181,35 @@ main {
 	.copiar {
 		top: 123%;
 		left: 268px;
+	}
+}
+
+@media (max-width:375px) {
+	header {
+		margin-top: 18px;
+		margin-left: 12px;
+	}
+
+	main {
+		margin-left: 0;
+		margin-top: 30px;
+	}
+
+	.input-texto {
+		height: 350px;                 /* Altura */
+		width: 335px;
+	}
+
+	.output-texto {
+		position: relative;
+		background: white;
+		width: 314px;
+		margin-left: 12px;
+		/*height: 244px;*/
+	}
+
+	.copiar {
+		top: 101%;
+		left: 58px;
 	}
 }
