@@ -10,7 +10,11 @@ https://david-carr-c.github.io/Encriptador/
 - CSS flexbox
 - Animaciones
 - Manipulacion del DOM
+- Control de versiones
 - y más
+
+### Reglas
+La letra "e" es convertida para "enter". La letra "i" es convertida para "imes". La letra "a" es convertida para "ai". La letra "o" es convertida para "ober". La letra "u" es convertida para "ufat". Debe funcionar solo con letras minúsculas. No deben ser utilizados letras con acentos ni caracteres especiales. Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
 
 ### Encriptador de texto - Challenge 1° - Oracle ONE
 Ganador de la insignia Encriptador
