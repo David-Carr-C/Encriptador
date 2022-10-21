@@ -12,6 +12,10 @@
 	font-family: 'Inter', sans-serif;
 }
 
+.swal-modal {
+	font-family: "Inter", sans-serif;
+}
+
 body {
 	background-color: #f3f5fc;     /* Este es el verdadero color de fondo */
 }

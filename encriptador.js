@@ -1,7 +1,18 @@
 // Autor: David C.  | Github: David-Carr-C
-// To-do: Bug al Desencriptar y encriptar
+// To-do:
+// - Comentar el JS
 
 function btnEncriptar() {
+	if (document.getElementById("input-texto").value == "" && window.matchMedia("(max-width:768px)").matches) {
+		swal("Error!", "Debes llenar el campo de arriba", "error");
+		return;
+	}
+
+	if (document.getElementById("input-texto").value == "") {
+		swal("Error!", "Debes llenar el campo de la izquierda", "error");
+		return;
+	}
+
 	input = document.getElementById("input-texto");
 	input = String(input.value);
 
@@ -24,6 +35,16 @@ function btnEncriptar() {
 }
 
 function btnDesencriptar() {
+	if (document.getElementById("output-texto").value == "" && window.matchMedia("(max-width:768px)").matches) {
+		swal("Error!", "Debes llenar el campo de abajo", "error");
+		return;
+	}
+
+	if (document.getElementById("output-texto").value == "") {
+		swal("Error!", "Debes llenar el campo de la derecha", "error");
+		return;
+	}
+
 	output = document.getElementById("output-texto");
 	output = String(output.value);
 
